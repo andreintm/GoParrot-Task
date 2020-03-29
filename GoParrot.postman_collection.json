@@ -1,0 +1,256 @@
+{
+	"info": {
+		"_postman_id": "8b71a7ff-e9c2-4f90-aae8-18c43af890f7",
+		"name": "GoParrot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "Author create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "title",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Andrei\",\n\t\"lastName\": \"Cociug\",\n\t\"birthday\": \"2019-01-01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/authors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Author retrieve collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/authors",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Author retrieve one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/authors/5e80b33a7ea35c0027d05193",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authors",
+								"5e80b33a7ea35c0027d05193"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Author delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/authors/5e80b33a7ea35c0027d05193",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authors",
+								"5e80b33a7ea35c0027d05193"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Author update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"Ivan\",\n\t\"lastName\": \"Lastname\",\n\t\"birthday\": \"2010-05-02\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/authors/5e80b83024f7da010970a373",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"authors",
+								"5e80b83024f7da010970a373"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Book retrieve collection",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book retrieve one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books/5e80dacc6ed41407846c4a2c",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"5e80dacc6ed41407846c4a2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books/5e80d9d2857b730748f47cb4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"5e80d9d2857b730748f47cb4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Book sample\",\n\t\"iban\": \"23432-23432432-423\",\n\t\"publishedAt\": \"2010-12-12\",\n\t\"author\": \"5e80b83024f7da010970a373\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/books",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Book update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "{{url}}/books/5e80fb46540f5d0ad4fc4626",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"5e80fb46540f5d0ad4fc4626"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
